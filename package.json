@@ -5,9 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
+    "start:next": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "next": "15.1.3",
