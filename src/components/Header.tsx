@@ -25,7 +25,7 @@ export function Header() {
           <Link href="/#how" className="hover:text-[var(--color-gold-600)]">
             How it works
           </Link>
-          <Link href="/trip/rome-florence-capri-demo" className="hover:text-[var(--color-gold-600)]">
+          <Link href="/trip/rome-assisi-pilgrimage-demo" className="hover:text-[var(--color-gold-600)]">
             Sample itinerary
           </Link>
         </nav>

@@ -99,7 +99,13 @@ export default function HomePage() {
                 href="/trip/rome-florence-capri-demo"
                 className="btn btn-ghost"
               >
-                See a sample itinerary
+                Family sample
+              </Link>
+              <Link
+                href="/trip/rome-assisi-pilgrimage-demo"
+                className="btn btn-ghost"
+              >
+                Pilgrimage sample
               </Link>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-[var(--color-muted)]">
