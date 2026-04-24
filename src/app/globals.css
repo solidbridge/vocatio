@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f7f1e3;
+  --color-cream-50: #fdfaf2;
+  --color-cream-100: #f7f1e3;
+  --color-cream-200: #ede3cc;
+  --color-cream-300: #dfd0ae;
+
+  --color-navy: #0f1e3d;
+  --color-navy-50: #e7ebf2;
+  --color-navy-100: #c3cbdd;
+  --color-navy-600: #1e3366;
+  --color-navy-700: #162850;
+  --color-navy-800: #0f1e3d;
+  --color-navy-900: #0a1630;
+
+  --color-gold: #c9a25e;
+  --color-gold-50: #faf4e7;
+  --color-gold-200: #ecd8a9;
+  --color-gold-500: #c9a25e;
+  --color-gold-600: #b08843;
+  --color-gold-700: #8f6c31;
+
+  --color-ink: #1a1a1a;
+  --color-muted: #6b6656;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 14px;
+  --shadow-card: 0 1px 2px rgba(15, 30, 61, 0.06), 0 8px 24px rgba(15, 30, 61, 0.08);
+  --shadow-card-hover: 0 2px 4px rgba(15, 30, 61, 0.08), 0 16px 40px rgba(15, 30, 61, 0.12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-cream-50);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--color-navy-800);
+  }
+  h1 { font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1.05; }
+  h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; }
+  h3 { font-size: 1.5rem; line-height: 1.2; }
+  a { color: inherit; }
+  ::selection { background: var(--color-gold-200); color: var(--color-navy-900); }
+}
+
+@layer components {
+  .container-v {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 180ms ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--color-navy-800);
+    color: var(--color-cream-50);
+  }
+  .btn-primary:hover { background: var(--color-navy-900); }
+  .btn-gold {
+    background: var(--color-gold-500);
+    color: var(--color-navy-900);
+  }
+  .btn-gold:hover { background: var(--color-gold-600); color: var(--color-cream-50); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-navy-800);
+    border-color: var(--color-navy-800);
+  }
+  .btn-ghost:hover { background: var(--color-navy-800); color: var(--color-cream-50); }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    background: var(--color-cream-200);
+    color: var(--color-navy-800);
+  }
+  .chip-gold {
+    background: var(--color-gold-50);
+    color: var(--color-gold-700);
+    border: 1px solid var(--color-gold-200);
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gold-600);
+    font-weight: 500;
+  }
+  .rule-gold {
+    height: 1px;
+    width: 2.5rem;
+    background: var(--color-gold-500);
+    display: inline-block;
+  }
+  .card {
+    background: #fff;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--color-cream-200);
+  }
+  .input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-cream-300);
+    border-radius: 10px;
+    background: #fff;
+    font-size: 1rem;
+    transition: border-color 160ms, box-shadow 160ms;
+  }
+  .input:focus {
+    outline: none;
+    border-color: var(--color-navy-800);
+    box-shadow: 0 0 0 3px rgba(15, 30, 61, 0.1);
+  }
+  .label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-navy-800);
+    letter-spacing: 0.01em;
+  }
+  .tab-btn {
+    position: relative;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-muted);
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 160ms, border-color 160ms;
+  }
+  .tab-btn:hover { color: var(--color-navy-800); }
+  .tab-btn[aria-selected="true"] {
+    color: var(--color-navy-800);
+    border-color: var(--color-gold-500);
+  }
+}
+
+/* scrollbar polish on tab bar */
+.tabs-scroll::-webkit-scrollbar { height: 3px; }
+.tabs-scroll::-webkit-scrollbar-thumb { background: var(--color-cream-300); border-radius: 2px; }
