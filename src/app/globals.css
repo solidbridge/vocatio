@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Senior-accessible defaults: large base type, generous tap targets,
+   high contrast, no dark mode surprises. */
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+button,
+a {
+  min-height: 44px;
+}
