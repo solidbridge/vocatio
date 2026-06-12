@@ -1,0 +1,17 @@
+{
+  "name": "MA Appeal Helper",
+  "short_name": "MA Appeal",
+  "description": "Turn a Medicare Advantage denial letter into a ready-to-send appeal.",
+  "start_url": "/new",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
